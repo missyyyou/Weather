@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:background="@color/colorPrimary">
+    <View
+        android:id="@+id/city_search"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginTop="10dp"
+        android:alpha="0"
+        android:layout_alignLeft="@+id/searchTextView"
+        android:layout_alignStart="@+id/searchTextView"
+        android:layout_toLeftOf="@+id/action_search"
+        android:layout_toStartOf="@+id/action_search"/>
+
+    <ImageButton
+        android:id="@+id/action_back"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:paddingLeft="10dp"
+        android:background="?selectableItemBackgroundBorderless"
+        android:src="@mipmap/common_back_arrow"/>
+
+    <EditText
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/action_back"
+
+        android:drawablePadding="4dp"
+        android:id="@+id/searchTextView"
+        android:layout_width="290dp"
+        android:layout_height="match_parent"
+        android:background="@null"
+        android:imeOptions="actionSearch"
+        android:inputType="textNoSuggestions"
+        android:maxLines="1"
+        android:hint="输入城市名或拼音"
+        android:textColor="@color/white"
+        android:textColorHint="@color/secondly_text_white"
+        android:textSize="16sp"/>
+
+    <ImageButton
+        android:id="@+id/action_search"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="?selectableItemBackgroundBorderless"
+        android:layout_toRightOf="@+id/searchTextView"
+        android:src="@mipmap/search"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:layout_alignParentBottom="true"
+        android:background="#fff"
+        android:backgroundTint="#10000000"
+        tools:targetApi="lollipop"/>
+</RelativeLayout>
